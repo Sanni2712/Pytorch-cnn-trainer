@@ -12,7 +12,10 @@ project_folder/
 ├── test.png/jpg            (almost any image format is supported)<br>
 ...
 ```
-Model class in testing program should be same as the model class in training program as the . 
+You may replace the current cards dataset with any image folder dataset or downloadable dataset (PyTorch Dataset object) of your choice.<br>
+Model class in testing program should be same as the model class in training program. <br>
+Using [Google Collab](colab.research.google.com) with GPU runtime for training models is recomended, use the [Pytorch_cnn.ipynb](https://github.com/Sanni2712/Pytorch-cnn-trainer/blob/main/Pytorch_cnn.ipynb)<br>
+Upload the [image folder dataset](https://github.com/Sanni2712/Pytorch-cnn-trainer/tree/main/dataset) during the session as a zip file and unzip it. 
 
 ## Requirements
 __📦📦Packages__<br>
@@ -87,7 +90,7 @@ dataset/
 │   ├── class2/
 │   │   ├── img101.jpg 
 │   │   └── ...
-│<br>
+│
 └── test/   ← optional 
     ├── class1/
     │   ├── imgX.jpg
@@ -95,6 +98,7 @@ dataset/
     ├── class2/
     │   ├── imgY.jpg
     │   └── ...
+   ...
 ```
 then in your `trainer.py` , make sure to have - <br>
 ```
@@ -109,7 +113,7 @@ dataset = datasets.ImageFolder(root="dataset/test", transform=img_transformer)
 
 ### 📥Loading popular datasets 
 
-**MNIST (handwritten digits)**<br>
+**MNIST (handwritten digits)** grayscale<br>
 ```
 dataset = datasets.MNIST(root="data", download=True, transform=...)
 ```
@@ -118,7 +122,7 @@ Store it in program folder<br>
 Give you easy access to the images + labels in a PyTorch-friendly format<br>
 
 similarly -<br>
-**Fashion-MNIST (clothing images)**
+**Fashion-MNIST (clothing images)** grayscale
 ```
 fashion_mnist = datasets.FashionMNIST(
     root="data",
@@ -182,25 +186,46 @@ split="test"     # test set
 split="valid"    # validation set
 split="unlabeled"  # unlabeled images
 split="all"      # full dataset
-STL10 → "train", "test", "unlabeled"
-
-CelebA → "train", "valid", "test", "all"
-
-Caltech101 / Caltech256 → "train", "test", "all"
 ```
+| Dataset                                                     | split (string)                                                    |
+| ----------------------------------------------------------- | ----------------------------------------------------------------- |
+| **STL10**                                                   | `"train"`, `"test"`, `"unlabeled"`                                |
+| **CelebA**                                                  | `"train"`, `"valid"`, `"test"`, `"all"`                           |
+| **Caltech101 / Caltech256**                                 | `"train"`, `"test"`, `"all"`                                      |
+| **COCO (Captions/Detection)**                               | split implied by folder, not a param — but concept is the same    |
+| **VOCSegmentation / VOCDetection**                          |  `"train"`, `"val"`, `"trainval"`, `"test"`                       |
+| **Places365**                                               | `"train-standard"`, `"train-challenge"`, `"val"`                  |
 
-- COCO (Captions/Detection) → split implied by folder, not a param — but concept is the same
-
-- VOCSegmentation / VOCDetection → "train", "val", "trainval", "test"
-
-- Places365 → "train-standard", "train-challenge", "val"
 
 **Datasets with neither**
 These just load whatever is in the directory or URL you give — no built-in split.
 ImageNet (split implied by folder)
 LSUN (uses class list instead of split param)
 
-## General Terminology:
+
+**⚠️Greyscale Databases (single channel)**<br>
+for dataset with RGB 3 channel `colour_channels=3`, for grayscale databases with 1 channel of colours, change to `colour_channels = 1` in model object creation.
+```
+
+model = CardCNN(num_classes=len(dataset.classes), colour_channels=3).to(device)      #default 3 (RGB)
+
+model = CardCNN(num_classes=len(dataset.classes), colour_channels=1).to(device)      #for database with grayscale images (black and white)
+
+```
+**Few Grayscale Databases**
+| Dataset                                                     | Channels | Description                                               |
+| ----------------------------------------------------------- | -------- | --------------------------------------------------------- |
+| **MNIST**                                                   | 1        | 28×28 handwritten digits (0–9).                           |
+| **Fashion-MNIST**                                           | 1        | 28×28 grayscale images of clothing items.                 |
+| **KMNIST**                                                  | 1        | 28×28 Kuzushiji handwritten characters (Japanese).        |
+| **QMNIST**                                                  | 1        | Extended MNIST with extra metadata.                       |
+| **EMNIST**                                                  | 1        | 28×28 handwritten letters and digits.                     |
+| **USPS**                                                    | 1        | 16×16 handwritten digits (older dataset).                 |
+| **Omniglot**                                                | 1        | Handwritten characters from many alphabets (varied size). |
+| **Medical datasets** (e.g., ChestX-ray8, some MRI datasets) | 1        | Because medical imaging often uses intensity data only.   |
+
+<br><br>
+## 🧠General parameters you need to know:
 ### epoch
 In machine learning, especially when training neural networks, an epoch is one complete pass through the entire training dataset.
 
