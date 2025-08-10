@@ -1,16 +1,16 @@
 # Pytorch-cnn-trainer
 A simple python project that trains an image recognition model based on a provided image folder dataset in the program folder and a program to test saved model
 
-Usage<br>
-Requirements<br>
-&nbsp;&nbsp;📥Installation
-&nbsp;&nbsp;🗃️ Custom Image Folder Dataset
-&nbsp;&nbsp;📥Loading popular datasets
-<br>
-General parameters you need to know<br>
-&nbsp;&nbsp;epoch
-&nbsp;&nbsp;batch size
-&nbsp;&nbsp;learning rate
+>**Index**<br>
+>[Usage](https://github.com/Sanni2712/Pytorch-cnn-trainer#usage)<br><br>
+[Requirements](https://github.com/Sanni2712/Pytorch-cnn-trainer#requirements)<br>
+&nbsp;&nbsp;[📥Installation](https://github.com/Sanni2712/Pytorch-cnn-trainer#installation)
+&nbsp;&nbsp;[🗃️Custom Image Folder Dataset](https://github.com/Sanni2712/Pytorch-cnn-trainer#%EF%B8%8F-custom-image-folder-dataset)
+&nbsp;&nbsp;[📥Loading popular datasets](https://github.com/Sanni2712/Pytorch-cnn-trainer#loading-popular-datasets)<br><br>
+[General parameters you need to know](https://github.com/Sanni2712/Pytorch-cnn-trainer#general-parameters-you-need-to-know)<br>
+&nbsp;&nbsp;[epoch](https://github.com/Sanni2712/Pytorch-cnn-trainer#epoch)
+&nbsp;&nbsp;[batch size](https://github.com/Sanni2712/Pytorch-cnn-trainer#batch-size)
+&nbsp;&nbsp;[learning rate](https://github.com/Sanni2712/Pytorch-cnn-trainer#learning-rate)
 
 
 
