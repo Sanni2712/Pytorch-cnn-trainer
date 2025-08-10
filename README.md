@@ -1,6 +1,20 @@
 # Pytorch-cnn-trainer
 A simple python project that trains an image recognition model based on a provided image folder dataset in the program folder and a program to test saved model
 
+Usage<br>
+Requirements<br>
+&nbsp;&nbsp;📥Installation
+&nbsp;&nbsp;🗃️ Custom Image Folder Dataset
+&nbsp;&nbsp;📥Loading popular datasets
+<br>
+General parameters you need to know<br>
+&nbsp;&nbsp;epoch
+&nbsp;&nbsp;batch size
+&nbsp;&nbsp;learning rate
+
+
+
+
 ## Usage
 ```
 project_folder/
@@ -15,7 +29,7 @@ project_folder/
 You may replace the current cards dataset with any image folder dataset or downloadable dataset (PyTorch Dataset object) of your choice.<br>
 Model class in testing program should be same as the model class in training program. <br>
 Using [Google Collab](colab.research.google.com) with GPU runtime for training models is recomended, use the [Pytorch_cnn.ipynb](https://github.com/Sanni2712/Pytorch-cnn-trainer/blob/main/Pytorch_cnn.ipynb)<br>
-Upload the [image folder dataset](https://github.com/Sanni2712/Pytorch-cnn-trainer/tree/main/dataset) during the session as a zip file and unzip it. 
+Upload the [🃜🃚🃖🃁🂭🂺](https://github.com/Sanni2712/Pytorch-cnn-trainer/tree/main/dataset) image folder (or any other) dataset during the session as a zip file and unzip it in collab. 
 
 ## Requirements
 __📦📦Packages__<br>
@@ -225,7 +239,7 @@ model = CardCNN(num_classes=len(dataset.classes), colour_channels=1).to(device) 
 | **Medical datasets** (e.g., ChestX-ray8, some MRI datasets) | 1        | Because medical imaging often uses intensity data only.   |
 
 <br><br>
-## 🧠General parameters you need to know:
+## General parameters you need to know
 ### epoch
 In machine learning, especially when training neural networks, an epoch is one complete pass through the entire training dataset.
 
