@@ -14,7 +14,7 @@ img_transformer = transforms.Compose([
 dataset = datasets.ImageFolder(root="dataset", transform=img_transformer)
 dataloader = DataLoader(dataset, batch_size=32, shuffle=True)
 d = 0
-save_model_name = input("Save the model as: _______.pth: ")
+save_model_name = input("Save the model as: _________.pth: ")
 
 l_r = 0.001
 try:
@@ -34,7 +34,7 @@ class CardCNN(nn.Module):
     def __init__(self, num_classes):
         super(CardCNN, self).__init__()
         self.conv = nn.Sequential(
-            nn.Conv2d(3, 32, kernel_size=3, padding=1),  # Input 3x128x128
+            nn.Conv2d(3, 32, kernel_size=3, padding=1),  # Input 3x128x128   ---- modify from 3 to 1 for greyscale database
             nn.ReLU(),
             nn.MaxPool2d(2),                             # 32x64x64
 
@@ -95,3 +95,4 @@ try:
     print(f"model saved as: {save_model_name}.pth")
 except Exception as e:
     print(f"error: {e}")
+
