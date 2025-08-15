@@ -47,14 +47,14 @@ No installation required for Google Collab ♾️.
 ### 🗃️ Custom Image Folder Dataset
 Your image dataset should follow this structre - <br>
 ```
-dataset/<br>
-├── class1/<br>
-│   ├── img001.jpg<br> 
-│   ├── img002.jpg<br>
-│   └── ...<br>
-├── class2/<br>
-│   ├── img101.jpg<br>
-│   └── ...<br>
+dataset/
+├── class1/
+│   ├── img001.jpg
+│   ├── img002.jpg
+│   └── ...
+├── class2/
+│   ├── img101.jpg
+│   └── ...
 ...
 ```
 and the program folder like this - 
