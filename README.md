@@ -5,16 +5,24 @@ A simple python project that trains an image recognition model based on a provid
 ## Usage
 ```
 project_folder/
-...
-├── dataset (folder)
-├── trianer.py              Trians the model and saves it in the same folder<br>
-├── test.py                 Loads the model and uses it to test by predicting an image class<br>
-├── model.pth               saved model<br>
-├── test.png/jpg            (almost any image format is supported)<br>
+ ├── dataset (folder)        Our dataset used for training
+ │    ├── class1/            each folder name is the name of the object to be classified
+ │    │   ├── img001.jpg     
+ │    │   ├── img002.jpg     
+ │    │   └── ...            
+ │    ├── class2/            
+ │    │   ├── img101.jpg     
+ │    │   └── ...            
+ │    ...                    
+ ├── trianer.py              Trians the model and saves it in the same folder
+ ├── test.py                 Loads the model and uses it to test by predicting an image class
+ ├── model.pth               saved model
+ ├── evaluate.py             Test the model accuracy (comming soon)
+ ├── test.png/jpg            Almost any image format is supported
 ...
 ```
 You may replace the current cards dataset with any image folder dataset or downloadable dataset (PyTorch Dataset object) of your choice.<br>
-Model class in testing program should be same as the model class in training program. <br>
+Model class archetecture in testing program and evaluation program should be same as the model class in training program. <br>
 Using [Google Collab](colab.research.google.com) with GPU runtime for training models is recomended, use the [Pytorch_cnn.ipynb](https://github.com/Sanni2712/Pytorch-cnn-trainer/blob/main/Pytorch_cnn.ipynb)<br>
 Upload the [🃜🃚🃖🃁🂭🂺](https://github.com/Sanni2712/Pytorch-cnn-trainer/tree/main/dataset) image folder (or any other) dataset during the session as a zip file and unzip it in collab. 
 
