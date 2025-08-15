@@ -27,13 +27,13 @@ Using [Google Collab](colab.research.google.com) with GPU runtime for training m
 Upload the [🃜🃚🃖🃁🂭🂺](https://github.com/Sanni2712/Pytorch-cnn-trainer/tree/main/dataset) image folder (or any other) dataset during the session as a zip file and unzip it in collab. 
 
 ## Requirements
-__📦📦Packages__<br>
+__Packages__<br>
 - PyTorch (torch) — core deep learning library.<br>
 - TorchVision (torchvision) — contains datasets and image transforms.<br>
 - Pillow (PIL) — image processing library.<br>
 
 ### Installation
-__🔲 CPU-only__
+__CPU-only__
 ```
 pip install torch torchvision pillow
 ```
@@ -52,7 +52,7 @@ Make sure -
 
 No installation required for Google Collab ♾️.
 
-### 🗃️ Custom Image Folder Dataset
+### Custom Image Folder Dataset
 Your image dataset should follow this structre - <br>
 ```
 dataset/
@@ -120,7 +120,7 @@ dataset = datasets.ImageFolder(root="dataset/test", transform=img_transformer)
 ``` 
 (optional, only if you have a Evaluation phase, data in /trian can also be used for the same)
 
-### 📥Loading popular datasets 
+### Loading popular datasets 
 
 **MNIST (handwritten digits)** grayscale<br>
 ```
