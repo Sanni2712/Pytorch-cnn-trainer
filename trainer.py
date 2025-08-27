@@ -31,7 +31,7 @@ print("\nClasses:", dataset.classes)
 
 
 class CardCNN(nn.Module):
-    def __init__(self, num_classes):
+    def __init__(self, num_classes, colour_channles= 3):
         super(CardCNN, self).__init__()
         self.conv = nn.Sequential(
             nn.Conv2d(3, 32, kernel_size=3, padding=1),  # Input 3x128x128   ---- modify from 3 to 1 for greyscale database
@@ -95,4 +95,3 @@ try:
     print(f"model saved as: {save_model_name}.pth")
 except Exception as e:
     print(f"error: {e}")
-
