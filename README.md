@@ -17,7 +17,7 @@ project_folder/
  ├── trianer.py              Trians the model and saves it in the same folder
  ├── test.py                 Loads the model and uses it to test by predicting an image class
  ├── model.pth               saved model
- ├── evaluate.py             Test the model accuracy (comming soon)
+ ├── evaluate.py             Test the model accuracy by looping through provided dataset
  ├── test.png/jpg            Almost any image format is supported
 ...
 ```
