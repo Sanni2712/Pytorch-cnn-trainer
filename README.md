@@ -22,14 +22,14 @@ project_folder/
 ...
 ```
 You may replace the current cards dataset with any image folder dataset or downloadable dataset (PyTorch Dataset object) of your choice.<br>
-Model class archetecture in testing program and evaluation program should be same as the model class in training program. <br>
+Model class archetecture in testing program and evaluation program should be same as the model class used for training the model. <br>
 Using [Google Collab](colab.research.google.com) with GPU runtime for training models is recomended, use the [Pytorch_cnn.ipynb](https://github.com/Sanni2712/Pytorch-cnn-trainer/blob/main/Pytorch_cnn.ipynb)<br>
-Upload the [🃜🃚🃖🃁🂭🂺](https://github.com/Sanni2712/Pytorch-cnn-trainer/tree/main/dataset) image folder (or any other) dataset during the session as a zip file and unzip it in collab. 
+Upload the [🃜🃚🃖🃁🂭🂺](https://github.com/Sanni2712/Pytorch-cnn-trainer/tree/main/dataset) image folder (or any other) dataset during the session as a zip file and unzip it in collab or upload it to your drive and mount your drive. 
 
 ## Requirements
 __Packages__<br>
-- PyTorch (torch) — core deep learning library.<br>
-- TorchVision (torchvision) — contains datasets and image transforms.<br>
+- PyTorch — core deep learning library.<br>
+- TorchVision — contains datasets and image transforms.<br>
 - Pillow (PIL) — image processing library.<br>
 
 ### Installation
