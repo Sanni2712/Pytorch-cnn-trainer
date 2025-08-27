@@ -46,7 +46,8 @@ pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
 pip install pillow
 ```
 Make sure -
-- Your GPU supports CUDA 12.1 - RTX 20-series (Turing), RTX 30-series (Ampere), and RTX 40-series (Ada Lovelace) [if not, install the correct version] <br>
+- Your GPU supports CUDA 12.1 - GTX 10 Series (Pascal), GTX 16 Series (Turing), RTX 20-series (Turing), RTX 30-series (Ampere), and RTX 40-series (Ada Lovelace)<br> [if not, install the correct version] <br>
+  RTX 50 series (Blackwell) - cuda 12.4-13.0 <br>
 - Matching NVIDIA driver is installed (for CUDA 12.1, that’s driver version ≥ 530)<br>
 - Python 3.8–3.12 (PyTorch support range)
 
